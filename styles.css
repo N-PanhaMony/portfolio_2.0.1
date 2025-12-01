@@ -1,0 +1,190 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main,
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main {
+    gap: 4rem;
+}
+
+header,
+main,
+footer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+    width: 100%;
+    background-color: #fff; /* optional */
+    padding: 1rem 2rem;
+}
+
+/* Flex container for logo and social links */
+.header-nav {
+    display: flex;
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center;            /* Vertically center */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Logo styling */
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0077b5; /* LinkedIn blue hover */
+}
+
+/* Remove conflicting global flex */
+header, nav {
+    display: block;
+    justify-content: initial;
+    align-items: initial;
+}
+
+/* ==========================
+   NAV ICONS
+========================== */
+nav i {
+    font-size: 1.3rem;
+}
+
+/* ==========================
+   INTRO SECTION
+========================== */
+.intro-header p {
+    padding-top: 0.25rem;
+}
+
+.intro-description {
+    max-width: 500px;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.link-arrow {
+    color: var(--color-link);
+    transform: rotate(-45deg);
+}
+
+/* ==========================
+   COLORS & DIVS
+========================== */
+.color-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ==========================
+   PROJECT CARDS
+========================== */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card>div:first-of-type {
+    flex: 1;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.tech-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+}
+
+.tech-list div {
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--border-radius-small);
+}
+
+.tech-list p {
+    font-size: 0.8rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (min-width: 640px) {
+    .project-card {
+        flex-direction: row;
+    }
+
+    .project-card .img-div {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 1rem;
+    }
+}
